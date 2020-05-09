@@ -1,0 +1,112 @@
+  html, body {
+    min-height: 100%;
+    margin: 0;
+  }
+  body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: hsl(0, 36%, 70%);
+    background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(0, 100%, 98%) 100%);
+  }
+  header, article {
+    margin: 2rem;
+  }
+  img {
+    width: 100%;
+  }
+  header > img {
+    width: auto;
+  }
+  article, footer {
+    text-align: center;
+  }
+  h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-weight: 300;
+    font-size: 3rem;
+  }
+  h1 > strong {
+    color: hsl(0, 6%, 24%);
+  }
+  p {
+    line-height: 1.5;
+  }
+  .visually-hidden { 
+    position: absolute !important;
+    height: 1px; 
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap; /* added line */
+  }
+  input, button {
+    border-radius: 30px;
+    font-size: 18px;
+    padding: 1rem 2rem;
+  }
+  input[type="email"] {
+    border: 1px solid hsl(0, 36%, 70%);
+    background-color: inherit;
+    margin-right: -60px;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 75%;
+  }
+  input[type="email"]::placeholder {
+    color: hsl(0, 36%, 70%);
+  }
+  button[type="submit"] {
+    cursor: pointer;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%) 0%, hsl(0, 74%, 74%) 100%);
+    color: white;
+    border: none;
+    vertical-align: bottom;
+    box-shadow: 0px 10px 30px -10px hsl(0, 36%, 70%);
+  }
+  button[type="submit"]:active,
+  button[type="submit"]:focus,
+  button[type="submit"]:hover {
+    background: hsl(0, 36%, 70%);
+  }
+  .attribution a { color: hsl(228, 45%, 44%); }
+  .hide-sm { display: none; }
+
+  @media only screen and (min-width: 768px) {
+    html, body {
+      height: 100%;
+    }
+    .container {
+      height: 100%;
+      display: flex;
+    }
+    main {
+      background: url('./images/bg-pattern-desktop.svg') no-repeat center center;
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    aside {
+      display: flex;
+    }
+    article {
+      text-align: initial;
+    }
+    .hide-sm { 
+      display: block;
+      object-fit: cover; 
+    }
+    .hide-lg { display: none; }
+  }
+  @media only screen and (min-width: 960px) {
+    main {
+      padding: 0 10vw;
+      background-size: cover;
+      flex: 1;
+    }
+    h1 {
+      font-size: 5rem;
+      letter-spacing: 1rem;
+    }
+  }
